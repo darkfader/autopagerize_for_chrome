@@ -1,0 +1,22 @@
+[
+{
+    "url": "^https://www.lashinbang.com/shop/list.php",
+    "nextLink": "//input[@value=' > ']",
+    "pageElement": "//td[@class='main']/div[2]"
+},
+{
+    "url": "^https://www.melonbooks.co.jp/mypage/favorite_circle.php",
+    "nextLink": "//li/a[@class='next']",
+    "pageElement": "//div[@id='container']/div/div/div/div[4]"
+},
+{
+    "url": "^https://www.melonbooks.co.jp/mypage/favorite_author.php",
+    "nextLink": "//a[@class='next']",
+    "pageElement": "//table[@class='bookmark_circle list']"
+},
+{
+    "url": "^https://www.melonbooks.co.jp/mypage/favorite.php",
+    "nextLink": "//a[@class='next']",
+    "pageElement": "//table[@class='mb40']"
+}
+]

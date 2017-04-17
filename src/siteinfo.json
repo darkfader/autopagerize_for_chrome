@@ -33889,5 +33889,53 @@ loadLocalSiteinfoCallback([
     "exampleUrl": "http:\/\/1470.net\/list\/memo\/recent\r\nhttp:\/\/1470.net\/list\/entry\/uri\/recent\/"
   },
   "created_at": "2008-04-16T12:35:17+09:00"
+},
+{
+  "name": "lashinbang.com",
+  "created_at": "2017-04-17T22:00:00+00:00",
+  "updated_at": "2017-04-17T22:00:00+00:00",
+  "created_by": "darkfader",
+  "data": {
+    "url": "^https:\/\/www\\.lashinbang\\.com\/shop\/list\\.php",
+    "nextLink": "\/\/input[@value=' > ']",
+    "pageElement": "\/\/td[@class='main']\/div[2]",
+    "exampleUrl": ""
+  }
+},
+{
+  "name": "melonbooks.co.jp favorite circles",
+  "created_at": "2017-04-17T22:00:00+00:00",
+  "updated_at": "2017-04-17T22:00:00+00:00",
+  "created_by": "darkfader",
+  "data": {
+    "url": "^https:\/\/www\\.melonbooks\\.co\\.jp\/mypage\/favorite_circle\\.php",
+    "nextLink": "\/\/li\/a[@class='next']",
+    "pageElement": "\/\/div[@id='container']\/div\/div\/div\/div[4]",
+    "exampleUrl": ""
+  }
+},
+{
+  "name": "melonbooks.co.jp favorite authors",
+  "created_at": "2017-04-17T22:00:00+00:00",
+  "updated_at": "2017-04-17T22:00:00+00:00",
+  "created_by": "darkfader",
+  "data": {
+    "url": "^https:\/\/www\\.melonbooks\\.co\\.jp\/mypage\/favorite_author\\.php",
+    "nextLink": "\/\/a[@class='next']",
+    "pageElement": "\/\/table[@class='bookmark_circle list']",
+    "exampleUrl": ""
+  }
+},
+{
+  "name": "melonbooks.co.jp favorite items",
+  "created_at": "2017-04-17T22:00:00+00:00",
+  "updated_at": "2017-04-17T22:00:00+00:00",
+  "created_by": "darkfader",
+  "data": {
+    "url": "^https:\/\/www\\.melonbooks\\.co\\.jp\/mypage\/favorite\\.php",
+    "nextLink": "\/\/a[@class='next']",
+    "pageElement": "\/\/table[@class='mb40']",
+    "exampleUrl": ""
+  }
 }
 ])
