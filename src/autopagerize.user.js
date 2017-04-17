@@ -347,7 +347,34 @@ AutoPager.prototype.getNextURL = function(xpath, doc, url) {
     var nextLink = getFirstElementByXPath(xpath, doc)
     if (nextLink) {
         var nextValue = nextLink.getAttribute('href') ||
-            nextLink.getAttribute('action') || nextLink.value
+            nextLink.getAttribute('action') || null;
+        if (nextValue === null) {
+            if (nextLink.value.indexOf('>') >= 0) {     // next page for lashinbang.com
+                var l = document.createElement("a");
+                l.href = url;
+                var query = l.search.slice(1).split('&');
+                var oResult = {};
+                for (var i = 0; i < query.length; i++) {
+                    var kv = query[i].split("=");
+                    oResult[kv[0]] = kv[1];
+                }
+                oResult['DISPACTION'] = 'dispstart';
+                delete oResult['DISPPOSITION'];
+                oResult['DISPSTARTCHG'] = /*parseInt(oResult['DISPSTARTCHG']) +*/ parseInt(oResult['DISPPAGE']) * this.pageNum;
+                oResult['DISPSTART'] = oResult['DISPSTARTCHG'];
+
+                var search2 = '?';
+                for (var key in oResult) {
+                    search2 += key + '=' + oResult[key] + '&';
+                }
+                console.log('pagenum ' + this.pageNum + ' search2 ' + search2);
+                l.search = search2;
+                return l.href;
+            }
+        }
+        if (nextValue === null) {
+            nextValue = nextLink.value;
+        }
         if (nextValue.match(/^http(s)?:/)) {
             return nextValue
         }
